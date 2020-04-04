@@ -1,2 +1,5 @@
-
-    <h1>index</h1>
+<div class="jumbotron">
+    <div class="container">
+        <h1>Selamat Datang </h1>
+    </div>
+</div>
