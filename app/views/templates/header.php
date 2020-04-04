@@ -17,6 +17,7 @@
             <div class="navbar-nav">
                 <a href="<?= BASEURL; ?>" class="nav-link nav-item">Home</a>
                 <a href="<?= BASEURL; ?>siswa" class="nav-link nav-item">Siswa</a>
+                <a href="<?= BASEURL; ?>guru" class="nav-link nav-item">Guru</a>
                 <a href="<?= BASEURL; ?>about" class="nav-link nav-item">About</a>
             </div>
         </div>
