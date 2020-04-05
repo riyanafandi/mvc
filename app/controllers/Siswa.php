@@ -28,6 +28,18 @@ class Siswa extends Controller
             Flasher::setFlash('Gagal', 'Ditambahkan', 'danger');
         }
     }
+    public function hapus($id)
+    {
+        if( $this->model('Siswa_model')->hapusDataSiswa($id) > 0 )
+        {
+            Flasher::setFlash('Berhasil', 'Dihapus', 'success');
+            header('location: ' . BASEURL . 'siswa');
+            exit;
+        }else{
+            Flasher::setFlash('Gagal', 'Dihapus', 'danger');
+        }
+    }
+
 }
 
 

@@ -21,7 +21,7 @@ class Siswa_model
         $this->db->bind('id', $id);
         return $this->db->single();
     }
-
+    
     public function tambahDataSiswa($data)
     {
         $query = "INSERT INTO siswa VALUES ('', :nama, :kelas, :alamat, :jurusan, :email)";
@@ -32,6 +32,15 @@ class Siswa_model
         $this->db->bind('alamat', $data["alamat"]);
         $this->db->bind('jurusan', $data["jurusan"]);
         $this->db->bind('email', $data["email"]);
+
+        $this->db->execute();
+        return $this->db->rowCount();
+    }
+    public function hapusDataSiswa($id)
+    {
+        $query = "DELETE FROM siswa WHERE id = :id";
+        $this->db->query($query);
+        $this->db->bind('id', $id);
 
         $this->db->execute();
         return $this->db->rowCount();

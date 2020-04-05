@@ -8,8 +8,11 @@
     <button class="btn my-3 btn-primary" type="button" data-toggle="modal" data-target="#modal">Tambah Data Siswa</button>
     <ul class="list-group">
     <?php foreach($data["siswa"] as $siswa): ?>
-        <li class="list-group-item d-flex align-item-center justify-content-between "><?= $siswa["nama"]; ?>
-        <a href="<?= BASEURL ?>siswa/detail/<?= $siswa["id"]; ?>" class="btn btn-sm btn-info">Detail</a>
+        <li class="list-group-item"><?= $siswa["nama"]; ?>
+
+        <a href="<?= BASEURL ?>siswa/hapus/<?= $siswa["id"]; ?>" class="btn btn-sm btn-danger ml-2 float-right" onclick="return confirm('yakin ingin menghapus');">Hapus</a>
+        
+        <a href="<?= BASEURL ?>siswa/detail/<?= $siswa["id"]; ?>" class="btn btn-sm btn-info float-right ml-2">Detail</a>
         </li>
     <?php endforeach; ?>
     </ul>
