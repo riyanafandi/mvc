@@ -22,5 +22,19 @@ class Siswa_model
         return $this->db->single();
     }
 
+    public function tambahDataSiswa($data)
+    {
+        $query = "INSERT INTO siswa VALUES ('', :nama, :kelas, :alamat, :jurusan, :email)";
+
+        $this->db->query($query);
+        $this->db->bind('nama', $data["nama"]);
+        $this->db->bind('kelas', $data["kelas"]);
+        $this->db->bind('alamat', $data["alamat"]);
+        $this->db->bind('jurusan', $data["jurusan"]);
+        $this->db->bind('email', $data["email"]);
+
+        $this->db->execute();
+        return $this->db->rowCount();
+    }
+
 }
-?>
