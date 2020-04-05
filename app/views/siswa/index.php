@@ -1,4 +1,9 @@
 <div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <?php Flasher::flash(); ?>
+        </div>
+    </div>
     <div class="h1">Daftar Siswa</div>
     <button class="btn my-3 btn-primary" type="button" data-toggle="modal" data-target="#modal">Tambah Data Siswa</button>
     <ul class="list-group">
